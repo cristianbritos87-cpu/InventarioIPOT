@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ipam-streamlit",
+  "private_key_id": "28d64bc6bc2f014aef6ddaaf258f38658e4defc9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfcPBbxfN+HoYK\nOwv+a68IZgOjkq02MicePVKWOelubIViOfP3txOkjeDv8tAVshR+YPj+mptg7aK5\n8jhW0YsB16uTOrGExbSSc/C3Sidv35eAzCulNjY4sduzuHGA0IesUhltY+TJIc2z\ntRhnwURVkf6733p8EIWITm5eNlFgdZzaOqafaX4Qck08NHr4+O17NA/AAnjDBoqx\naSUEBCDicEwCdllhtIAAt1CQY9crbLXrzBAdyVWxaqRXIweC1ZO/BVWhRka4bvK9\nZQWl6ycuAS8tURYdgQZFQYYy/18jqblh0WYMiIA7Ef+/29a1ogsslHhQnykcDzfq\nSfwKH4OzAgMBAAECggEAO1sTprV3oPW30sjrvzrY5OjAp7fDpqV9CcXthfW9YnWW\nm0jc29247Jo5+lPs3g6P7iCRlIT6qK2H8FB9keaZQDSMIhDR7nzcopkFBZO/1TK2\n2uKh54H2tmnc/KmPEVKT7/1hPtNuB9YggFAnuww2vGqLmlnb/lAfQN3g6MsSJAar\nOsDDSnPNAlQSvVCKKJfxSAjWVeapcpoXty9aNDyslHIOi3U4D6VZdANhdN5RASSi\nY1ZfVLN2ztQ5Bq9JFPaZiKSuiSGrGFnUhg8RgQI02KKxySkgDX6GvHk9z/FP0+SY\nnR+bs0wAJhO9J1PIuqPB3lpduOFjbkQJtT3fNskqYQKBgQD0VQ8Z8h3sEBGS3a3Z\nuhBaSCy4j0LSfaoR1B66kpdHBL4tGWNSxPVOxd0Eng6lFMH0rjXjNV/J9EqsycUx\nTl+WOFcubV0MiRnwU4tqnxUH8CfWE6szVIJCDyX0EbsqH89ZiQGBI/5EBno+u1e2\nKwfpUsXqQixXNo9cyWkkBIPmUwKBgQDqHHzyPvNOclKcTquTWvLevL41hy6xkUuW\nKMac07324kCQgr+Vjs7lN2ZK2tSvwTlLJ9PK6kwolq3gQu8/K4/bFZV7x3RDcPAU\nK8Ioe+WSRVGAKGQDb1rMm5HjJlDOEoeDiCOpXuqh0C03NHvGKR43YHI7GqT1RCOI\njtLS2dWBIQKBgQCkoMNiGg8rRdBxgshnEcV+726ilHTT2zRCewiRccBYa8uwG5Ee\n7fLTtuIrAEyh0pC1SsSoaQg3zVCbiABELqidUSz87Vdq4N4HXmNr3fCPvrM4vVv3\nZBO4aviJsYDI61IM5BGNcDEcqLipmBWLewcDoXAVXaz+vpZuUI91Y010XQKBgQCj\n1AfD5jWRwgL5izwaRF0NbfuVreIJNOo2TJagjLS1HiOcfULgwC0czqXw4C5SR992\nLorRxyBAjyFifLS7+hoTcIlJM4yy3UfEddLLTdibgZLFIn7KwJRD9uIimV+WtfTL\nIOwDzH5ZejsKFNpBE+knS4Dkx4KEeIh9OaVjFDmKwQKBgDjOsCu5yMOnyvWb9ccW\nKIIjmMNEpS6eWujrHzTJxnVK+Kid2Q78BC/JvbLN3KfAMxXC90PbX89wgVEVkwnq\nKUJpyBM2Lp9DYZ/qnfTGSllFFdMxs2gvXi0XCmzqsTdFe0eu2VCrm8rDkis2YRha\nOwkl3/lCa5zejmT+4ti/nhKF\n-----END PRIVATE KEY-----\n",
+  "client_email": "ipam-bot@ipam-streamlit.iam.gserviceaccount.com",
+  "client_id": "106250266994941888590",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ipam-bot%40ipam-streamlit.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
