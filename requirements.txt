@@ -1,3 +1,4 @@
-pandas
-openpyxl
 streamlit
+pandas
+gspread
+google-auth
