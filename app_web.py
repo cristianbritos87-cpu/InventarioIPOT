@@ -40,17 +40,31 @@ SCOPES = [
     "https://www.googleapis.com/auth/drive",
 ]
 
+#@st.cache_resource
+#def get_client():
+#    """Crea el cliente de Google Sheets usando las credenciales del secret."""
+#    info = dict(st.secrets["gcp_service_account"])
+#    # Corrige private_key si los \n llegaron como espacios
+#    pk = info.get("private_key", "")
+#    if "\n" not in pk:
+#        body = pk.replace("-----BEGIN PRIVATE KEY-----", "").replace("-----END PRIVATE KEY-----", "").strip()
+#        body = "\n".join(body.split())
+#        pk = "-----BEGIN PRIVATE KEY-----\n" + body + "\n-----END PRIVATE KEY-----\n"
+#        info["private_key"] = pk
+#    creds = Credentials.from_service_account_info(info, scopes=SCOPES)
+#    return gspread.authorize(creds)
+
 @st.cache_resource
 def get_client():
-    """Crea el cliente de Google Sheets usando las credenciales del secret."""
-    info = dict(st.secrets["gcp_service_account"])
-    # Corrige private_key si los \n llegaron como espacios
-    pk = info.get("private_key", "")
-    if "\n" not in pk:
-        body = pk.replace("-----BEGIN PRIVATE KEY-----", "").replace("-----END PRIVATE KEY-----", "").strip()
-        body = "\n".join(body.split())
-        pk = "-----BEGIN PRIVATE KEY-----\n" + body + "\n-----END PRIVATE KEY-----\n"
-        info["private_key"] = pk
+    import json, re
+    raw = st.secrets["gcp_service_account"]["json_data"]
+    info = json.loads(raw)
+    # Reconstruye la private_key correctamente
+    pk = info["private_key"]
+    pk = re.sub(r'-----BEGIN PRIVATE KEY-----', '', pk)
+    pk = re.sub(r'-----END PRIVATE KEY-----', '', pk)
+    pk = re.sub(r'[\s]+', '\n', pk.strip())
+    info["private_key"] = "-----BEGIN PRIVATE KEY-----\n" + pk.strip() + "\n-----END PRIVATE KEY-----\n"
     creds = Credentials.from_service_account_info(info, scopes=SCOPES)
     return gspread.authorize(creds)
 
