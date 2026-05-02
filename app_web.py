@@ -55,6 +55,12 @@ def get_client():
     st.write("Primeros 100 chars:", str(raw)[:100])
     info = json.loads(raw)
     st.write("Keys encontradas:", list(info.keys()))
+
+    # ← AGREGÁ ESTAS 3 LÍNEAS ACÁ
+    st.write("Private key primeros 100:", info["private_key"][:100])
+    st.write("Private key últimos 50:", info["private_key"][-50:])
+    st.write("Largo total:", len(info["private_key"]))
+    
     creds = Credentials.from_service_account_info(info, scopes=SCOPES)
     return gspread.authorize(creds)
 
