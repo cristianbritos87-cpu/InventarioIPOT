@@ -43,10 +43,15 @@ SCOPES = [
 @st.cache_resource
 def get_client():
     """Crea el cliente de Google Sheets usando las credenciales del secret."""
-    creds = Credentials.from_service_account_info(
-        st.secrets["gcp_service_account"],
-        scopes=SCOPES,
-    )
+    info = dict(st.secrets["gcp_service_account"])
+    # Corrige private_key si los \n llegaron como espacios
+    pk = info.get("private_key", "")
+    if "\n" not in pk:
+        body = pk.replace("-----BEGIN PRIVATE KEY-----", "").replace("-----END PRIVATE KEY-----", "").strip()
+        body = "\n".join(body.split())
+        pk = "-----BEGIN PRIVATE KEY-----\n" + body + "\n-----END PRIVATE KEY-----\n"
+        info["private_key"] = pk
+    creds = Credentials.from_service_account_info(info, scopes=SCOPES)
     return gspread.authorize(creds)
 
 @st.cache_data(ttl=60)
