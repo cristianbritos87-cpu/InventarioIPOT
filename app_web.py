@@ -43,9 +43,10 @@ SCOPES = [
 @st.cache_resource
 def get_client():
     """Crea el cliente de Google Sheets usando las credenciales del secret."""
-    import json
-    info = json.loads(st.secrets["gcp_service_account"]["json_data"])
-    creds = Credentials.from_service_account_info(info, scopes=SCOPES)
+    creds = Credentials.from_service_account_info(
+        st.secrets["gcp_service_account"],
+        scopes=SCOPES,
+    )
     return gspread.authorize(creds)
 
 @st.cache_data(ttl=60)
